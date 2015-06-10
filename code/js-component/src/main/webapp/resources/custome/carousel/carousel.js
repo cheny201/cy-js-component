@@ -25,7 +25,6 @@
 			delay:3000//自动播放延时
 		}
 		$.extend(this.options,options);
-		console.log(this.options);
 		this.initDOM();
 		this.initSize();
 		this.bindEvent();

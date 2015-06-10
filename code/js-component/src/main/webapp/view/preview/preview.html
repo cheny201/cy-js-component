@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="../../resources/custome/preview/viwepager.css"/>
+  <script src="../../resources/js/jquery-1.11.3.min.js"></script>
+  <script src="../../resources/custome/preview/viwepager-1.0.js"></script>
+  <title>手机端图片预览</title>
+ </head>
+ <body>
+   <div id="wrap">
+   </div>
+<script>
+$(function(){
+	var list=[{
+	     width:600,
+		 height:400,
+		 image:"1.jpg"
+	   },{
+	     width:600,
+		 height:400,
+		 image:"2.jpg"
+	   },{
+	     width:600,
+		 height:400,
+		 image:"3.jpg"
+	   },{
+	     width:600,
+		 height:400,
+		 image:"4.jpg"
+	   },{
+	     width:600,
+		 height:400,
+		 image:"5.jpg"
+	   },{
+	     width:600,
+		 height:400,
+		 image:"6.jpg"
+	   },{
+	     width:1080,
+		 height:3750,
+		 image:"7.jpg"
+	   }];
+	   new Viwepager({
+	     'wrap':"wrap",
+		 'list':list
+	   });
+})
+</script>
+ </body>
+</html>
