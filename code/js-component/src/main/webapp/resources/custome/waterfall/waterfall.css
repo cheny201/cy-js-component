@@ -1,0 +1,41 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	background: #eee;
+}
+
+.waterfall-content {
+	position: relative;
+}
+
+.waterfall-item {
+	padding: 15px 0 0 15px;
+	float: left;
+}
+
+.waterfall-box {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	border-shadow: 0 0 6px #ccc;
+	padding: 10px;
+}
+
+.waterfall-box img {
+	width: 168px;
+	height: auto;
+}
+
+/***********************************************************/
+/************************纯CSS3实现***************************/
+/**
+ * 缺点
+ *	图片顺序不固定，顺序为从上到下，从左到右
+**/
+.container {
+	margin:0 auto;
+	-webkit-column-width: 205px;
+	-moz-column-width:205px;
+/* 	-webkit-column-gap: 25px; */
+/* 	-moz-column-gap: 25px; */
+}

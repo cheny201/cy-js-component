@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewpoint"
+	content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="../../resources/css/base.css" />
+<link rel="stylesheet"
+	href="../../resources/custome/waterfall/waterfall.css" />
+<script src="../../resources/js/jquery-1.11.3.min.js"></script>
+<script src="../../resources/custome/waterfall/waterfall.js"></script>
+<title>瀑布流js实现</title>
+</head>
+<body>
+	<div id="main">
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/1.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/2.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/3.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/4.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/5.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/6.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/7.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/8.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/9.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/10.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/11.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/12.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/13.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/14.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/22.jpg" />
+			</div>
+		</div>
+		<div class="waterfall-item">
+			<div class="waterfall-box">
+				<img src="./images/42.jpg" />
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var waterfall = null;
+	window.onload = function() {
+		var options = {
+			loadData : loadData,
+		};
+		waterfall = Waterfall.init("main", options);
+	}
+
+	function loadData() {
+		waterfall.renderDOM(getImgList());
+		waterfall.reflush();
+	}
+
+	function getImgList() {
+		var ls = [];
+		for (var i = 0; i < 10; i++) {
+			ls.push({
+				"src" : "images/" + i + ".jpg"
+			});
+		}
+		return ls;
+	}
+</script>
+</html>
