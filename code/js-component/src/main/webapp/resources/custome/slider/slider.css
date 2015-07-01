@@ -1,0 +1,83 @@
+.silder,.silder .main{
+	position:relative;
+	height: 400px;
+	width: 100%;
+}
+
+/*幻灯片区域*/
+.silder .main{
+	overflow:hidden;
+}
+
+/*每一个幻灯片的样式*/
+.silder .main .main-i{
+	position:absolute;
+	height:500px;
+	top:0;
+	left:0;
+	float: left;
+	width: 100%;
+}
+.silder .main .main-i .caption{
+	position:absolute;
+	top:30%;
+	right:50%;
+	z-index: 9;
+}
+
+.silder .main .main-i .caption h2{
+	font-size: 40px;
+	line-height: 50px;
+	color: #B5B5B5;
+	text-align: right;
+}
+.silder .main .main-i .caption h3{
+	font-size: 70px;
+	line-height: 70px;
+	color: #000000;
+	text-align: right;
+	font-family: 'Open Sans Condensed';
+}
+
+.silder .main .main-i img{
+	width: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 1;
+}
+/*控制区域*/
+.silder .ctrl{
+	width:100%;
+	height:13px;
+	line-height: 13px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	bottom: -13px;
+	background-color: #f00;	
+}
+.silder .ctrl .ctrl-i{
+	position: relative;
+	display:inline-block;
+	height: 13px;
+	width: 150px;
+	background-color: #666;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.silder .ctrl .ctrl-i img{
+	width:100%;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	z-index: 1;
+}
+
+
+.silder .ctrl .ctrl-i:hover{
+	background-color: #F0F0F0F0;
+};
+
+.silder .ctrl .ctrl-i:hover img{
+	bottom: 13px;
+};

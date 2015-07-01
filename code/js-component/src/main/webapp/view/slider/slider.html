@@ -1,0 +1,55 @@
+<!doctype>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" href="../../resources/css/base.css"/>
+  <link rel="stylesheet" href="../../resources/custome/slider/slider.css"/>
+  <script src="../../resources/js/jquery-1.11.3.min.js"></script>
+  <script src="../../resources/custome/slider/slider.js"></script>
+  <title>幻灯片</title>
+  
+ </head>
+ <body>
+   <div id="wrap" class="silder">
+   		<div class="main">
+   			<div class="main-i">
+   				<div class="caption">
+   					<h2>h2 Caption</h2>
+   					<h3>h3 Caption</h3>
+   				</div>
+   				<img alt="" src="img/1.jpg">
+   			</div>
+        <!-- <div class="main-i">
+          <div class="caption">
+            <h2>222</h2>
+            <h3>222</h3>
+          </div>
+          <img alt="" src="img/2.jpg">
+        </div> -->
+   		</div>
+   		<div class="ctrl">
+   			<a class="ctrl-i" href="javascript:slider.change()"><img alt="" src="img/1.jpg"></a>
+<!--    			<a class="ctrl-i" href="javascript:changeImg()"><img alt="" src="img/2.jpg"></a> -->
+   		</div>
+   </div>
+<script>
+var slider;
+$(function(){
+	var list=[
+		 {image:"image/1.jpg",title1:"111",title2:"222"},
+		 {image:"image/2.jpg",title1:"111",title2:"222"},
+		 {image:"image/3.jpg",title1:"111",title2:"222"},
+		 {image:"image/4.jpg",title1:"111",title2:"222"},
+		 {image:"image/5.jpg",title1:"111",title2:"222"},
+		 {image:"image/6.jpg",title1:"111",title2:"222"},
+		 {image:"image/7.jpg",title1:"111",title2:"222"}
+	   ];
+	slider = new Slider('wrap',list);
+})
+</script>
+ </body>
+</html>
