@@ -2,27 +2,37 @@
 	position:relative;
 	height: 400px;
 	width: 100%;
+	/*border: 1px solid black;*/
 }
 
-/*幻灯片区域*/
+/* 幻灯片区域 */
 .silder .main{
 	overflow:hidden;
 }
 
-/*每一个幻灯片的样式*/
+/* 每一个幻灯片的样式 */
 .silder .main .main-i{
 	position:absolute;
 	height:500px;
 	top:0;
-	left:0;
-	float: left;
 	width: 100%;
+	z-index: 2;
+	float: left;
+	opacity: 0;
+	right:50%;
+	-webkit-transition:all 0.5s;
 }
+
+.silder .main .main_right{
+	right: -50%;
+}
+
 .silder .main .main-i .caption{
 	position:absolute;
 	top:30%;
 	right:50%;
 	z-index: 9;
+	margin-right: 13%;
 }
 
 .silder .main .main-i .caption h2{
@@ -30,23 +40,30 @@
 	line-height: 50px;
 	color: #B5B5B5;
 	text-align: right;
+	margin-right: 45px;
 }
 .silder .main .main-i .caption h3{
 	font-size: 70px;
 	line-height: 70px;
 	color: #000000;
 	text-align: right;
+	margin-right: -45px;
 	font-family: 'Open Sans Condensed';
+}
+.silder .main .main-i .caption h2,
+.silder .main .main-i .caption h3{
+	opacity: 0;
+	-webkit-transition:all 1s 0.8s;
 }
 
 .silder .main .main-i img{
 	width: 100%;
 	position: absolute;
-	top:0;
+	top:40%;
 	left: 0;
 	z-index: 1;
 }
-/*控制区域*/
+/* 控制区域 */
 .silder .ctrl{
 	width:100%;
 	height:13px;
@@ -55,7 +72,6 @@
 	position: absolute;
 	left: 0;
 	bottom: -13px;
-	background-color: #f00;	
 }
 .silder .ctrl .ctrl-i{
 	position: relative;
@@ -63,6 +79,7 @@
 	height: 13px;
 	width: 150px;
 	background-color: #666;
+	margin-left:1px;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 .silder .ctrl .ctrl-i img{
@@ -71,13 +88,66 @@
 	left: 0;
 	bottom: 50px;
 	z-index: 1;
+	border: 1px red solid;
+	opacity: 0;
 }
 
-
+/* hover 到控制按钮 */
 .silder .ctrl .ctrl-i:hover{
-	background-color: #F0F0F0F0;
-};
-
+	background-color: #F0F0F0;
+}
+/*  	
+	倒影样式
+	webkit-box-reflect(倒影的方向，偏移，遮罩)//倒影
+  	webkit-gradient(
+		linear,线性渐变
+		left top,起始位置
+		left bottom,结束位置
+		from(transparent),起始颜色
+		color-stop(50%,transparent),过度颜色
+		to(rgba(255,255,255,0.3))结束颜色
+  	)渐变
+*/
 .silder .ctrl .ctrl-i:hover img{
 	bottom: 13px;
-};
+	 -webkit-box-reflect:below 0px -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(transparent),
+		color-stop(50%,transparent),
+		to(rgba(255,255,255,0.3))
+	);
+	opacity: 1; 
+}
+/*当前展现的状态*/
+.silder .ctrl .ctrl-i_active,
+.silder .ctrl .ctrl-i_active:hover{
+	background-color: #000;
+}
+.silder .ctrl .ctrl-i_active:hover img{
+	opacity: 0;
+}
+/*.silder .main .main-i .caption h2{
+	margin-right: 45px;
+}
+.silder .main .main-i .caption h3{
+	margin-right: -45px;
+}*/
+.silder .main .main-i_active{
+	opacity: 1;
+	right: 0;
+	z-index: 2;
+}
+.silder .main .main-background{
+	opacity: 1;
+	right: 0;
+	z-index: 1;
+}
+
+.silder .main .main-i_active .caption h2,
+.silder .main .main-i_active .caption h3{
+	margin-right: 0;
+	opacity: 1;
+	-webkit-transition:all 0.8s 0.5s;
+}

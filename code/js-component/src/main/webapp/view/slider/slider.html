@@ -1,4 +1,4 @@
-<!doctype>
+<!Doctype html>
 <html>
  <head>
   <meta charset="UTF-8">
@@ -14,41 +14,34 @@
   
  </head>
  <body>
-   <div id="wrap" class="silder">
-   		<div class="main">
-   			<div class="main-i">
+   <div id="wrap1" style="margin-top:50px;">
+   		<!-- <div class="main">
+   			<div class="main-i main-i_active">
    				<div class="caption">
    					<h2>h2 Caption</h2>
    					<h3>h3 Caption</h3>
    				</div>
    				<img alt="" src="img/1.jpg">
    			</div>
-        <!-- <div class="main-i">
-          <div class="caption">
-            <h2>222</h2>
-            <h3>222</h3>
-          </div>
-          <img alt="" src="img/2.jpg">
-        </div> -->
    		</div>
    		<div class="ctrl">
-   			<a class="ctrl-i" href="javascript:slider.change()"><img alt="" src="img/1.jpg"></a>
-<!--    			<a class="ctrl-i" href="javascript:changeImg()"><img alt="" src="img/2.jpg"></a> -->
-   		</div>
+   			<a class="ctrl-i ctrl-i_active" href="javascript:slider.change(0)"><img alt="" src="img/1.jpg" /></a>
+      </div> -->
    </div>
+   <div id="wrap2" style="margin-top:50px;"></div>
 <script>
-var slider;
 $(function(){
 	var list=[
-		 {image:"image/1.jpg",title1:"111",title2:"222"},
-		 {image:"image/2.jpg",title1:"111",title2:"222"},
-		 {image:"image/3.jpg",title1:"111",title2:"222"},
-		 {image:"image/4.jpg",title1:"111",title2:"222"},
-		 {image:"image/5.jpg",title1:"111",title2:"222"},
-		 {image:"image/6.jpg",title1:"111",title2:"222"},
-		 {image:"image/7.jpg",title1:"111",title2:"222"}
+		 {image:"img/1.jpg",title1:"测试-1-h2",title2:"测试-1-h3"},
+		 {image:"img/2.jpg",title1:"Friendly",title2:"DEVIL"},
+		 {image:"img/3.jpg",title1:"测试-3-h2",title2:"测试-3-h3"},
+		 {image:"img/4.jpg",title1:"测试-4-h2",title2:"测试-4-h3"},
+		 {image:"img/5.jpg",title1:"测试-5-h2",title2:"测试-5-h3"},
+		 {image:"img/6.jpg",title1:"测试-6-h2",title2:"测试-6-h3"},
+		 {image:"img/7.jpg",title1:"测试-7-h2",title2:"测试-7-h3"}
 	   ];
-	slider = new Slider('wrap',list);
+	Slider.init('wrap1',list);
+  Slider.init('wrap2',list);
 })
 </script>
  </body>
